@@ -1,6 +1,7 @@
 package com.jsnunez.antiguedades.domain.entities;
 import java.sql.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,8 +35,9 @@ public class Transaccion {
     @ManyToOne
     @JoinColumn(name = "vendedor_id")
     private Persona vendedor;
-    
-    private Double monto;
+
+    @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
+    private long monto;
     
     @ManyToOne
     @JoinColumn(name = "estacionPago_id")
@@ -45,6 +47,6 @@ public class Transaccion {
     @JoinColumn(name = "tipoTransaccion_id")
     private TipoTransaccion tipoTransaccion;
 
-    // Getters y Setters
+   
 }
 

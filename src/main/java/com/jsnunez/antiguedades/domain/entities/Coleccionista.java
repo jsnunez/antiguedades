@@ -16,20 +16,15 @@ import lombok.Setter;
 @Entity
 @Table(name = "coleccionistas")
 public class Coleccionista {
-    
- 
- 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne 
+    @OneToOne
     private Persona persona;
     @Column(columnDefinition = "INT", nullable = false)
     int canidadCompras;
     @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
     double totalCompras;
-    
-    
-    // Getters y Setters
-}
 
+}

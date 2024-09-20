@@ -27,5 +27,5 @@ public class DetalleTransaccion {
     @ManyToOne
     @JoinColumn(name = "antiguedad_id")
     private Antiguedad antiguedad;
-    // Getters y Setters
+   
 }

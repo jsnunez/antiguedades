@@ -1,6 +1,7 @@
 package com.jsnunez.antiguedades.domain.entities;
 import java.sql.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,7 @@ public class Despacho {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+    @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String estado;
     
     @Temporal(TemporalType.DATE)
@@ -32,5 +33,4 @@ public class Despacho {
     @JoinColumn(name = "transaccion_id")
     private Transaccion transaccion;
 
-    // Getters y Setters
 }

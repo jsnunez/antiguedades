@@ -38,6 +38,6 @@ public class HistorialPropiedad {
     @JoinColumn(name = "propietarioActual_id")
     private Persona propietarioActual;
 
-    // Getters y Setters
+
 }
 

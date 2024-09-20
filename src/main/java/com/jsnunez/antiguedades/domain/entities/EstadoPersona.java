@@ -1,5 +1,6 @@
 package com.jsnunez.antiguedades.domain.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,11 +18,7 @@ public class EstadoPersona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private String descripcion;
+    @Column(columnDefinition = "VARCHAR(100)", nullable = false)
+    private String Estado;
 
-    // @OneToMany(mappedBy = "estadoPersona")
-    // private List<Persona> personas;
-
-    // Getters y Setters
 }

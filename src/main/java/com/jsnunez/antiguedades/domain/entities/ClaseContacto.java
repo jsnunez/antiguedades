@@ -15,15 +15,13 @@ import lombok.Setter;
 @Entity
 @Table(name = "clasecontacto")
 public class ClaseContacto {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String nombre;
 
-
-    // Getters y Setters
+  
 }
-

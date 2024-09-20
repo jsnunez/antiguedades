@@ -17,21 +17,21 @@ import lombok.Setter;
 @Entity
 @Table(name = "contactopersona")
 public class ContactoPersona {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(columnDefinition = "VARCHAR(30)", nullable = false)
     private String numero;
-    
+
     @ManyToOne
     @JoinColumn(name = "persona_id")
     private Persona persona;
-    
+
     @ManyToOne
     @JoinColumn(name = "clasecontacto_id")
     private ClaseContacto claseContacto;
 
-    // Getters y Setters
+    
 }

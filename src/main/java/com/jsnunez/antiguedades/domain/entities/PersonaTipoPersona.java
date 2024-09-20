@@ -30,5 +30,5 @@ public class PersonaTipoPersona {
     @JoinColumn(name = "tipopersona_id")
     private TipoPersona tipoPersona;
 
-    // Getters y Setters
+    
 }

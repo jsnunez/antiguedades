@@ -1,5 +1,6 @@
 package com.jsnunez.antiguedades.domain.entities;
-import java.sql.Date;
+
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "antiguedades")
 public class Antiguedad {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,21 +31,20 @@ public class Antiguedad {
 
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String descripcion;
-    
+
     @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
     private long precio;
-    
 
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String estadoConservacion;
-    
+
     @Temporal(TemporalType.DATE)
     private Date fechaRegistro;
-    
+
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
-    
+
     @ManyToOne
     @JoinColumn(name = "propietario_id")
     private Persona propietario;
@@ -56,5 +56,5 @@ public class Antiguedad {
     @ManyToOne
     @JoinColumn(name = "epoca_id")
     private EpocaAntigueda epocaAntigueda;
-    // Getters y Setters
+   
 }
