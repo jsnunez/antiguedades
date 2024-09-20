@@ -50,7 +50,6 @@ public class Antiguedad {
     private Persona propietario;
 
     @ManyToOne
-    @JoinColumn(name = "sucursal_id")
     private Sucursal sucursal;
 
     @ManyToOne

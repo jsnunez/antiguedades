@@ -34,7 +34,7 @@ public class ColeccionistaService implements IColeccionista {
     public Coleccionista update(Long id, Coleccionista coleccionista) {
         return coleccionistaRepository.findById(id)
             .map(existingColeccionista -> {
-                existingColeccionista.setCanidadCompras(coleccionista.getCanidadCompras());
+                existingColeccionista.setCantidadCompras(coleccionista.getCantidadCompras());
                 existingColeccionista.setTotalCompras(coleccionista.getTotalCompras());
                 existingColeccionista.setPersona(coleccionista.getPersona());
                 return coleccionistaRepository.save(existingColeccionista);

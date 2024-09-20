@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jsnunez.antiguedades.aplication.service.IAntiguedad;
-import com.jsnunez.antiguedades.domain.entities.Antiguedad;
+import com.jsnunez.antiguedades.aplication.service.IDetalleTransaccion;
+import com.jsnunez.antiguedades.domain.entities.DetalleTransaccion;
 import com.jsnunez.antiguedades.infraestructure.repository.*;
 @Service
 public class DetalleTransaccionService implements IDetalleTransaccion {

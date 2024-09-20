@@ -24,12 +24,11 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String nombre;
-    @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
+    @Column(columnDefinition = "INT", nullable = false)
     private String nit;
 
-    @OneToMany(mappedBy = "empresa")
-    private List<Sucursal> sucursales;
+
 
 }

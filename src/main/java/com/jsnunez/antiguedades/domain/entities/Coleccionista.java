@@ -23,7 +23,7 @@ public class Coleccionista {
     @OneToOne
     private Persona persona;
     @Column(columnDefinition = "INT", nullable = false)
-    int canidadCompras;
+    int cantidadCompras;
     @Column(columnDefinition = "DECIMAL(10,2)", nullable = false)
     double totalCompras;
 

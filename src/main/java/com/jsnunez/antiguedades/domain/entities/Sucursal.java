@@ -9,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +16,6 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name = "sucursal")
 public class Sucursal {
     
     @Id
