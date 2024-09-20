@@ -66,18 +66,18 @@ return iAntiguedad.getAll();    }
     // @Autowired
     // private IVenta iVenta; // Suponiendo que tienes un servicio para manejar ventas
 
-    // @GetMapping("/disponibles")
-    // public List<AntiguedadDTO> listarAntiguedadesDisponibles() {
-    //     return iAntiguedad.listarDisponibles();
-    // }
+    @GetMapping("/disponibles")
+    public List<Antiguedad> listarAntiguedadesDisponibles() {
+        return iAntiguedad.listarDisponibles();
+    }
 
-    // @GetMapping("/categoria/{categoria}/rango-precio")
-    // public List<AntiguedadDTO> buscarPorCategoriaYPrecio(
-    //         @PathVariable String categoria,
-    //         @RequestParam double precioMinimo,
-    //         @RequestParam double precioMaximo) {
-    //     return iAntiguedad.buscarPorCategoriaYPrecio(categoria, precioMinimo, precioMaximo);
-    // }
+    @GetMapping("/categoria/{categoria}/rango-precio")
+    public List<Antiguedad> buscarPorCategoriaYPrecio(
+            @PathVariable int categoria,
+            @RequestParam Long precioMinimo,
+            @RequestParam Long precioMaximo) {
+        return iAntiguedad.buscarPorCategoriaYPrecio(categoria, precioMinimo, precioMaximo);
+    }
 
     // @GetMapping("/historial-ventas/{clienteId}")
     // public List<VentaDTO> mostrarHistorialVentas(@PathVariable Long clienteId) {

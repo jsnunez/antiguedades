@@ -4,10 +4,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
 public class AntiguedadDTO {
     private String nombre;
-    private String categoria;
-    private double precio;
-    private String estadoConservacion;
+    // private String categoria;
+    // private double precio;
+    // private String estadoConservacion;
+
+    public AntiguedadDTO(String nombre) {
+        this.nombre = nombre;
+    }
 
 }

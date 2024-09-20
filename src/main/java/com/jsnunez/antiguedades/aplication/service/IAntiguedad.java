@@ -14,8 +14,8 @@ public interface IAntiguedad {
     Antiguedad update(Long id,Antiguedad antiguedad);
     void deleteById(Long id); 
 
-    List<AntiguedadDTO> listarDisponibles();
-    List<AntiguedadDTO> buscarPorCategoriaYPrecio(String categoria, double precioMinimo, double precioMaximo);
+    List<Antiguedad> listarDisponibles();
+    List<Antiguedad> buscarPorCategoriaYPrecio(int categoria,double  precioMinimo, double precioMaximo);
     List<AntiguedadDTO> listarPopulares();
     Map<String, Integer> generarInformeInventario();
 }

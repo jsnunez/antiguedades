@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import javax.swing.JOptionPane;
 
 import com.jsnunez.antiguedades.aplication.service.IAntiguedad;
 import com.jsnunez.antiguedades.domain.DTO.AntiguedadDTO;
@@ -57,17 +58,15 @@ public class AntiguedadService implements IAntiguedad {
     }
 
     @Override
-    public List<AntiguedadDTO> listarDisponibles() {
-         {
-            // return antiguedadRepository.findAllAvailableForSale();
-            return null;
-        } }
+    public List<Antiguedad> listarDisponibles() {
+        System.out.println(antiguedadRepository.findAllAvailableForSale());
+            return antiguedadRepository.findAllAvailableForSale();
+        } 
 
     @Override
-    public List<AntiguedadDTO> buscarPorCategoriaYPrecio(String categoria, double precioMinimo, double precioMaximo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscarPorCategoriaYPrecio'");
-    }
+    public List<Antiguedad> buscarPorCategoriaYPrecio(int categoria, double precioMinimo, double precioMaximo) {
+
+        return antiguedadRepository.findByCategoriaAndPrecioRange(categoria,precioMinimo,precioMaximo);  }
 
     @Override
     public List<AntiguedadDTO> listarPopulares() {
