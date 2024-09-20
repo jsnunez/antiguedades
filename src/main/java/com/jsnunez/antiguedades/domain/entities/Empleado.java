@@ -23,7 +23,7 @@ public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-        @Column(columnDefinition = "VARCHAR(100)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String nombre;
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String apellido;

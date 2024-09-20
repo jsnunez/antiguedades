@@ -32,6 +32,6 @@ public class Sucursal {
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
     @ManyToOne
-    @JoinColumn(name = "Ciudad")
+    @JoinColumn(name = "ciudad_id")
     private Ciudad ciudad ;
 }
