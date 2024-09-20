@@ -58,9 +58,10 @@ public class AntiguedadService implements IAntiguedad {
 
     @Override
     public List<AntiguedadDTO> listarDisponibles() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listarDisponibles'");
-    }
+         {
+            // return antiguedadRepository.findAllAvailableForSale();
+            return null;
+        } }
 
     @Override
     public List<AntiguedadDTO> buscarPorCategoriaYPrecio(String categoria, double precioMinimo, double precioMaximo) {

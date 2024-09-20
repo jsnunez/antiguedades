@@ -38,6 +38,8 @@ public class Antiguedad {
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String estadoConservacion;
 
+    private boolean disponible;
+
     @Temporal(TemporalType.DATE)
     private Date fechaRegistro;
 

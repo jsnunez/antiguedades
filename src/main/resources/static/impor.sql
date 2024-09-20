@@ -92,12 +92,12 @@ INSERT INTO categorias (nombre) VALUES
 ('Arte Popular'),
 ('Joyas Antiguas');
 -- Inserciones para la tabla Antiguedades
-INSERT INTO antiguedades (nombre, descripcion, precio, estado_Conservacion, fecha_Registro, categoria_id, propietario_id, sucursal_id, epoca_id) VALUES
-('Vase Maya', 'Un hermoso vase de la cultura Maya.', 1500.00, 'Excelente', NOW(), 1, 1, 1, 1),
-('Estatua Inca', 'Estatua de un guerrero Inca.', 2500.00, 'Buena', NOW(), 2, 2, 1, 2),
-('Cerámica Azteca', 'Cerámica pintada de la cultura Azteca.', 800.00, 'Regular', NOW(), 3, 1, 1, 1),
-('Mueble Colonial', 'Mueble de época colonial.', 3000.00, 'Excelente', NOW(), 4, 3, 2, 3),
-('Arte Huichol', 'Obra de arte hecha por la comunidad Huichol.', 1200.00, 'Buena', NOW(), 1, 2, 2, 2);
+INSERT INTO antiguedades (nombre,disponible, descripcion, precio, estado_Conservacion, fecha_Registro, categoria_id, propietario_id, sucursal_id, epoca_id) VALUES
+('Vase Maya',1, 'Un hermoso vase de la cultura Maya.', 1500.00, 'Excelente', NOW(), 1, 1, 1, 1),
+('Estatua Inca',1, 'Estatua de un guerrero Inca.', 2500.00, 'Buena', NOW(), 2, 2, 1, 2),
+('Cerámica Azteca',1, 'Cerámica pintada de la cultura Azteca.', 800.00, 'Regular', NOW(), 3, 1, 1, 1),
+('Mueble Colonial',1, 'Mueble de época colonial.', 3000.00, 'Excelente', NOW(), 4, 3, 2, 3),
+('Arte Huichol',1, 'Obra de arte hecha por la comunidad Huichol.', 1200.00, 'Buena', NOW(), 1, 2, 2, 2);
 -- Inserciones para la tabla RankingAntiguedad
 INSERT INTO rankingantiguedad (nombre, antiguedad_id) VALUES
 ('Primera', 1),
